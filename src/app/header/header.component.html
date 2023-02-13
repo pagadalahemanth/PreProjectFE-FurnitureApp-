@@ -1,0 +1,26 @@
+<!-- <p>header works!</p> -->
+<mat-toolbar color="accent">
+
+    <span><a class="a" routerLink="/">NIIT Furniture's</a></span>
+
+    <span class="example-spacer"></span>
+    
+    <button *ngIf="ls.isAdminLogged" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <a routerLink="add"><mat-icon >add_box</mat-icon></a>
+    </button>
+
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <a routerLink="register"><mat-icon >person</mat-icon></a>
+    </button>
+
+       <!-- <span style="margin-top: -12px;" *ngIf="ls.isUserLogged">{{"pagadala"}}</span> -->
+    <button *ngIf="!ls.isLoggedin"  mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <a routerLink="login"><mat-icon >login</mat-icon></a>
+    </button>
+
+    <button (click)="logout()" *ngIf="ls.isLoggedin" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <a> <mat-icon>logout</mat-icon></a>
+    </button>
+    
+</mat-toolbar>
+ 

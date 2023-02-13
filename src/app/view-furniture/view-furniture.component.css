@@ -1,0 +1,24 @@
+.example-card {
+    max-width: 250px;
+    max-height: fit-content;
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: rgb(182, 197, 237);
+    box-shadow: 5px 5px 5px rgb(129, 121, 125);
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/furniture.jpg');
+    background-size: cover;
+  }
+  div{
+    display:flex;
+  }
+
+  mat-card-subtitle{
+    padding-top: 10px;
+  }
+  button{
+    color: rgb(17, 18, 18);
+    background-color: rgb(86, 180, 180);
+  }

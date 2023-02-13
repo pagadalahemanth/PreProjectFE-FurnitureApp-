@@ -1,0 +1,13 @@
+{
+  "registration": [
+    {
+      "firstname": "pagadala",
+      "lastname": "hemanth",
+      "email": "preethi@07gmail.com",
+      "password": "preethi07",
+      "cpassword": "preethi07",
+      "Type": "admin",
+      "id": 1
+    }
+  ]
+}

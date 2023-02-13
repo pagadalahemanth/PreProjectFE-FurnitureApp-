@@ -1,0 +1,39 @@
+<!-- <!-- <p>login works!</p> -->
+<mat-card>
+    <div>
+        <h1 style="color: blueviolet; font-weight: bold;">Login Form</h1>
+    </div>
+
+<form [formGroup]="logindetails">
+<div>
+  <mat-form-field  style="margin-right: 40px;" appearance="fill">
+    <mat-label>Email Id..</mat-label>
+    <input matInput placeholder="Enter EmailId" formControlName="email">
+  <mat-error *ngIf="email?.errors?.['required']">
+    First Name is required.
+  </mat-error>
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password..</mat-label>
+    <input matInput placeholder="Enter Password" formControlName="password">
+    <mat-error *ngIf="password?.errors?.['required']">
+      Last Name is required.
+    </mat-error>
+    <mat-icon matSuffix>vpn_key</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+</div>
+
+<section>
+    <div class="example-button-row">
+      <!-- <button style="margin-right: 40px; margin-left: 100px;" mat-raised-button color="primary">Reset</button> -->
+      <button [disabled]="logindetails.invalid" (click)="addLogData() "style="margin-right: 40px;" mat-raised-button color="accent">Submit</button>
+    </div>
+  </section>
+</form>
+
+
+</mat-card>

@@ -1,0 +1,13 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  button{
+    margin-right: 15px;
+  }
+  .a{
+    text-decoration: none;
+    color: aliceblue;
+  }
+    /* mat-icon{
+        color: darkred;
+    } */

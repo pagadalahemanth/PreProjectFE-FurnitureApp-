@@ -1,0 +1,48 @@
+<!-- <p>addfurniture works!</p> -->
+<mat-card>
+    <div>
+        <h1 style="color: blueviolet; font-weight: bold;">Add Furniture Form</h1>
+    </div>
+
+<form [formGroup]="furnituredetails">
+<div>
+  <mat-form-field  style="margin-right: 40px;" appearance="fill">
+    <mat-label>Title..</mat-label>
+    <input matInput placeholder="Enter Title" formControlName="title">
+  <mat-error *ngIf="title?.errors?.['required']">
+    Title is required.
+  </mat-error>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field style="margin-right: 40px;" appearance="fill">
+    <mat-label>description..</mat-label>
+    <input matInput placeholder="Description about product" formControlName="desc">
+    <mat-error *ngIf="desc?.errors?.['required']">
+      Description is required.
+    </mat-error>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>price..</mat-label>
+    <input matInput placeholder="Enter Price" formControlName="price">
+    <mat-error *ngIf="price?.errors?.['required']">
+      Last Name is required.
+    </mat-error>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+</div>
+
+<section>
+    <div class="example-button-row">
+      <button type="reset" [disabled]="furnituredetails.invalid" (click)="addFurnitureData() "style="margin-right: 40px;" mat-raised-button color="accent">Submit</button>
+    </div>
+  </section>
+</form>
+
+
+</mat-card>
